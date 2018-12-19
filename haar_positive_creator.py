@@ -78,7 +78,7 @@ else:
     cv2.namedWindow('frame',cv2.WINDOW_AUTOSIZE)
     cv2.setMouseCallback('frame',obj_marker)
     #creating a file handle
-    file_name = open(sys.argv[2],"w")
+    file_name = open(sys.argv[2],"a")
     #loop to traverse through all the files in given path
     for i in list:
         print(str(i))
