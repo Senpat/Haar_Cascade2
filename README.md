@@ -29,6 +29,8 @@ trianglecrop -> triangle pictures converted from bgtriangle.txt (for negative da
 
 squarecrop.txt -> text file containing path to all pictures in squarecrop
 
-trianglecrop.txt -> file file containing path to all pictures in trianglecrop 
+trianglecrop.txt -> text file containing path to all pictures in trianglecrop 
 
+squareneg.txt -> negative description file for squares - contains allnegatives and trianglecrop.txt
 
+triangleneg.txt -> negative description file for triangles - contains allnegatives squarecrop.txt
