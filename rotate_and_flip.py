@@ -14,7 +14,7 @@ def process(pic,output):
 	img = cv2.imread(pic)
 	img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-	for i in range(8):															#8 for squares, 30 for other
+	for i in range(16):															#8 for squares, 30 for other
 		count+=1
 		cv2.imwrite(output + '/' + FILENAME + str(count) + '.png',img)
 
@@ -29,7 +29,7 @@ def process(pic,output):
 		(rows,cols) = img.shape[:2]
 
 		#M = cv2.getRotationMatrix2D(	(cols/2,rows/2),random.randint(8,15),1)
-		M = cv2.getRotationMatrix2D(	(cols/2,rows/2),random.randint(30,60),1)			#better for squares
+		M = cv2.getRotationMatrix2D(	(cols/2,rows/2),random.randint(10,30),1)			#better for squares
 		img = cv2.warpAffine(img,M,(cols,rows))
 
 	print(count)

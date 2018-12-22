@@ -6,10 +6,10 @@ import cv2
 import numpy as np
 import imutils
 
-videopath = "C:/Users/zz198/Desktop/PatrickP/RC/CV/redsquare.h264"
+videopath = "C:/Users/zz198/Desktop/RC/testvideos/redsquare.h264"
 cap = cv2.VideoCapture(videopath)
 
-triangle_cascade = cv2.CascadeClassifier("data/cascade.xml")
+triangle_cascade = cv2.CascadeClassifier("squaredata2/cascade.xml")
 
 while True:
 	ret,frame = cap.read()
@@ -18,7 +18,7 @@ while True:
 	#frame = imutils.resize(frame,width = 364,height=85)
 	gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
-	triangles = triangle_cascade.detectMultiScale(gray,50)
+	triangles = triangle_cascade.detectMultiScale(gray,50,1)
 
 	for(x,y,w,h) in triangles:
 		print((x,y,w,h))
