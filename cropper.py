@@ -5,17 +5,16 @@
 import sys
 import cv2
 
-#make bg.txt because i forgot
-bg = open("negatives/bg.txt","w")
-for i in range(1,1136):
-	bg.write("neg" + str(i) + ".png\n")
-
-quit()
+#make negative description file
+bg = open(sys.argv[3],"w")
+#for i in range(1,1136):
+#	bg.write("neg" + str(i) + ".png\n")
+#quit()
 
 
 
 f = open(sys.argv[1],"r")
-out = open(sys.argv[3])
+#out = open(sys.argv[3])
 
 count = 1
 
@@ -33,6 +32,6 @@ for line in f.readlines():
 
 	cv2.imwrite(sys.argv[2]+"/neg"+str(count)+".png",crop)
 
-
+	bg.write(sys.argv[2]+"/neg"+str(count)+".png\n")
 
 	count+=1
