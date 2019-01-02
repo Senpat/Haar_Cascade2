@@ -6,7 +6,8 @@ import cv2
 import numpy as np
 import imutils
 
-videopath = "C:/Users/zz198/Desktop/RC/testvideos/redsquare.h264"
+#videopath = "C:/Users/zz198/Desktop/RC/testvideos/redsquare.h264"				#small laptop
+videopath = "C:/Users/zz198/Desktop/PatrickP/RC/CV/whiteTriangle_Trim.mp4"				#laptank
 cap = cv2.VideoCapture(videopath)
 
 triangle_cascade = cv2.CascadeClassifier("squaredata2/cascade.xml")
