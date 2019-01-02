@@ -25,7 +25,7 @@ For example: `opencv_createsamples -info bgsquare.txt -num 450 -w 20 -h 20 -vec 
 ### Files
 bgtriangle.txt -> triangle positive description file
 
-bgsquare.txt -> square positive description file
+bgsquare.txt -> square positive description file. bgsquare2.txt, squarecrop2, and squarecrop2.txt contains MORE data.
 
 negatives -> negative images for all (grass)
 
