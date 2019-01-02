@@ -16,6 +16,8 @@ Run cropper.py to convert description file to images (only does one crop per lin
 
 Note that the description file for negative data is formatted differently than positives. cropper.py will create a file called squarecrop that contains a path to all of the files in squarecrop. The idea is you copy the contents of squarecrop.txt to the negative description file of triangle and all the other shapes (but not square).
 
+Run scramble.py (for example `python scramble.py triangleneg.txt` that scrambles all of the lines in the text file.
+
 Run opencv_createsamples to create a positives vector file. 
 
 `opencv_createsamples -info [positive description file] -num [number of data] -w 20 -h 20 -vec [name of positives vector file]`
