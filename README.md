@@ -31,8 +31,8 @@ Run opencv_traincascade to train!
 Command used to train triangles: `opencv_traincascade -data triangledata -vec positivestriangle.vec -bg triangleneg.txt -numPos 1800 -numNeg 1800 -numStages 10 -w 20 -h 20 -miniHitRate 0.5 -maxFalseAlarmRate 0.3`
 
 Notes about training:
-..* for numPos and numNeg, use a number slightly smaller that what you actually have because the haar cascade will eat up more data each stage.
-..* decrease miniHitRate and maxFalseAlarmRate for more accuracy.
+⋅⋅* for numPos and numNeg, use a number slightly smaller that what you actually have because the haar cascade will eat up more data each stage.
+⋅⋅* decrease miniHitRate and maxFalseAlarmRate for more accuracy.
 
 ### Files
 bgtriangle.txt -> triangle positive description file
