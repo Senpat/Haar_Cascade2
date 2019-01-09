@@ -24,6 +24,16 @@ Run opencv_createsamples to create a positives vector file.
 
 For example: `opencv_createsamples -info bgsquare.txt -num 450 -w 20 -h 20 -vec positivessquare.vec`
 
+Run opencv_traincascade to train!
+
+`opencv_traincascade -data [data output folder] -vec [positives vector file] -bg [negative description file] -numPos [number of positive images] -numNeg [number of negative images] -numStages [number of stages, usually 10] -w [width] -h [height]`
+
+Command used to train triangles: `opencv_traincascade -data triangledata -vec positivestriangle.vec -bg triangleneg.txt -numPos 1800 -numNeg 1800 -numStages 10 -w 20 -h 20 -miniHitRate 0.5 -maxFalseAlarmRate 0.3`
+
+Notes about training:
+  * for numPos and numNeg, use a number slightly smaller that what you actually have because the haar cascade will eat up more data each stage.
+  * decrease miniHitRate and maxFalseAlarmRate for more accuracy.
+
 ### Files
 bgtriangle.txt -> triangle positive description file
 
@@ -42,3 +52,5 @@ trianglecrop.txt -> text file containing path to all pictures in trianglecrop
 squareneg.txt -> negative description file for squares - contains allnegatives and trianglecrop.txt
 
 triangleneg.txt -> negative description file for triangles - contains allnegatives squarecrop.txt
+
+squaredata and squaredata2 -> contains .xml files from after training. squaredata3 is from training with bgsquare2.txt included. squaredata3 NOT TRAINED YET.
