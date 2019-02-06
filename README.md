@@ -54,3 +54,5 @@ squareneg.txt -> negative description file for squares - contains allnegatives a
 triangleneg.txt -> negative description file for triangles - contains allnegatives squarecrop.txt
 
 squaredata and squaredata2 -> contains .xml files from after training. squaredata3 is from training with bgsquare2.txt included. squaredata3 NOT TRAINED YET.
+
+triangledata -> contains .xml files for triangles with squares in negative data. Used miniHitRate = 0.5, triangledata2 and triangledata3 will contain .xml files from training with miniHitRate = 0.999, mFAR = 0.3, 
