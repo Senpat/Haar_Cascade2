@@ -6,6 +6,18 @@ import cv2
 import numpy as np
 import imutils
 
+def localize(x,y,w,h,actualh):
+	#in meters
+	#vdistance = 16.8438/w 						#vertical distance in meters
+
+	vdistance = 203.712/w
+	print(vdistance)
+
+
+
+
+
+
 
 videopath = "C:/Users/zz198/Desktop/RC/testvideos/whitesquaregopro1.mp4"				#small laptop
 #videopath = "C:/Users/zz198/Desktop/RC/testvideos/dronetest1.mp4"
@@ -30,7 +42,8 @@ while True:
 																				#(gray,1.3,5) works well for differing sizes
 
 	for(x,y,w,h) in triangles:
-		print((x,y,w,h),detected)
+		#print((x,y,w,h),detected)
+		localize(x,y,w,h,-1)
 		cv2.rectangle(frame,(x,y),(x+w,y+h),(255,255,0),2)
 
 		detected+=1
