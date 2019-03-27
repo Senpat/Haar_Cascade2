@@ -24,7 +24,7 @@ while True:
 	#frame = imutils.resize(frame,width = 80,height = 50)						#for pentagon
 	#frame = imutils.resize(frame,width = 364,height=85)
 	gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-	gray = cv2.GaussianBlur(gray, (5,5), 0)
+	#gray = cv2.GaussianBlur(gray, (5,5), 0)
 	ret, gray = cv2.threshold(gray, 250,255,cv2.THRESH_BINARY)
 	triangles = triangle_cascade.detectMultiScale(gray,1.25,5)					#(gray,50,1) works best with whiteTriangle_Trim and redtriangle
 																				#(gray,1.3,5) works well for differing sizes
